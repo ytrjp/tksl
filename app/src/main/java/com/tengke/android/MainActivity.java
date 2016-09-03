@@ -5,11 +5,10 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import android.support.v4.widget.SwipeRefreshLayout;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.text_view) TextView textView;
@@ -19,40 +18,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ButterKnife.bind(this);
 
-        List<String> array = new ArrayList<>();
 
         textView.setOnClickListener(v-> {
 
         });
-
-        new Thread(()->{}).start();
-
-        List languages = Arrays.asList("java", "Scala", "Java", "C++");
-
-        languages.();
-
     }
-
 }
-
-
- class Person {
-
-    public enum Sex {
-        MALE, FEMALE
-    }
-
-    String name;
-    Sex gender;
-    String emailAddress;
-
-    public int getAge() {
-        // ...
-        return 0;
-    }
-
-    public void printPerson() {
-        // ...
-    }
- }

@@ -9,13 +9,9 @@ import android.widget.TextView;
 
 import com.tengke.android.R;
 import com.tengke.android.base.view.citypicker.model.City;
-import com.zaaach.citypicker.R;
 
 import java.util.List;
 
-/**
- * author zaaach on 2016/1/26.
- */
 public class ResultListAdapter extends BaseAdapter {
     private Context mContext;
     private List<City> mCities;
