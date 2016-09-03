@@ -8,14 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.tengke.android.R;
-import com.zaaach.citypicker.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * author zaaach on 2016/1/26.
- */
 public class HotCityGridAdapter extends BaseAdapter {
     private Context mContext;
     private List<String> mCities;
