@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 
-        textView.setOnClickListener(v-> {
-
-        });
+//        textView.setOnClickListener(v-> {
+//
+//        });
     }
 }
