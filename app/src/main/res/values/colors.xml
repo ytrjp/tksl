@@ -19,4 +19,8 @@
 
     <color name="div_gray">#ccc</color>
 
+    <color name="color_99ffffff">#99ffffff</color>
+    <color name="color_ef000000">#ef000000</color>
+
+
 </resources>

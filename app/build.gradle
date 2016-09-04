@@ -1,8 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "24.0.2"
+    buildToolsVersion "24.0.0"
     defaultConfig {
         applicationId "com.tengke.android"
         minSdkVersion 10
@@ -29,6 +31,7 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.jakewharton:butterknife:8.4.0'
     compile 'org.greenrobot:eventbus:3.0.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.github.traex.calendarlistview:library:1.2.3'
     compile 'com.alibaba:fastjson:1.1.54.android'
     compile('de.keyboardsurfer.android.widget:crouton:1.8.5@aar') {

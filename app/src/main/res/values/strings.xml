@@ -7,4 +7,9 @@
     <string name="nothing_found">没有搜索结果~</string>
     <string name="locating">正在定位…</string>
     <string name="located_failed">定位失败</string>
+    <string name="title_activity_base">BaseActivity</string>
+
+    <string name="home">首页</string>
+    <string name="order_list">订单</string>
+    <string name="my_user">我的</string>
 </resources>
