@@ -18,6 +18,10 @@
         <activity
             android:name=".base.ui.BaseActivity"
             android:label="@string/title_activity_base"></activity>
+        <activity android:name=".business.aircraft.AircraftMainActivity"/>
+        <activity android:name=".business.car.CarMainActivity"/>
+        <activity android:name=".business.train.TrainMainActivity"/>
+        <activity android:name=".business.hotels.HotelMainActivity"/>
     </application>
 
 </manifest>

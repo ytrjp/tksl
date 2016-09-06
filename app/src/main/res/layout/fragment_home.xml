@@ -1,13 +1,78 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.tengke.android.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+   <TextView android:id="@+id/banner_view"
+       android:layout_width="match_parent"
+       android:layout_height="128dp"
+       android:text="@string/app_ch_name"
+       android:gravity="center"
+       android:background="@drawable/overlay_bg"/>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/home" />
+        android:layout_below="@id/banner_view"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:id="@+id/line_one"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_below="@id/banner_view"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/hotel_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_deep"
+                android:gravity="center"
+                android:text="@string/hotel"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"/>
+
+            <TextView android:id="@+id/air_ticket_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_deep"
+                android:text="@string/air_ticket"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_below="@id/line_one"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/railway_ticket_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_deep"
+                android:gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/railway_ticket"
+                android:layout_weight="1"/>
+            <TextView android:id="@+id/rent_car"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_deep"
+                android:text="@string/rent_car"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
