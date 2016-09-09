@@ -6,11 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.tengke.android.R;
 
+import butterknife.ButterKnife;
+
 public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
 }
