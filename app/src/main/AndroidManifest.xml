@@ -53,7 +53,8 @@
         <activity android:name=".business.train.TrainMainActivity"/>
         <activity android:name=".business.hotels.HotelMainActivity"/>
 
-        <activity android:name=".base.view.citypicker.CityPickerActivity"/>
+        <activity android:name=".base.view.citypicker.CityPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
 
 
 

@@ -27,6 +27,9 @@ import com.tengke.android.base.view.citypicker.model.LocateState;
 import com.tengke.android.base.view.citypicker.utils.StringUtils;
 import com.tengke.android.base.view.citypicker.utils.ToastUtils;
 import com.tengke.android.base.view.citypicker.view.SideLetterBar;
+import com.tengke.android.eventbus.SelectCityMsgEvent;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
@@ -152,11 +155,10 @@ public class CityPickerActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void back(String city){
-        ToastUtils.showToast(this, "点击的城市：" + city);
-//        Intent data = new Intent();
-//        data.putExtra(KEY_PICKED_CITY, city);
-//        setResult(RESULT_OK, data);
-//        finish();
+        SelectCityMsgEvent event = new SelectCityMsgEvent();
+        event.setCity(city);
+        EventBus.getDefault().post(event);
+        this.finish();
     }
 
     @Override

@@ -14,6 +14,11 @@ import android.widget.TextView;
 import com.tengke.android.R;
 import com.tengke.android.base.ui.BaseFragment;
 import com.tengke.android.base.view.citypicker.CityPickerActivity;
+import com.tengke.android.eventbus.SelectCityMsgEvent;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,6 +46,18 @@ public class HotelFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void refreshCityName(SelectCityMsgEvent event) {
+        cityNameTxt.setText(event.getCity());
     }
 
     @Override
