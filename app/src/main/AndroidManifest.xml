@@ -47,21 +47,21 @@
         </activity>
         <activity
             android:name=".base.ui.BaseActivity"
-            android:label="@string/title_activity_base"></activity>
-        <activity android:name=".business.aircraft.AircraftMainActivity"/>
-        <activity android:name=".business.car.CarMainActivity"/>
-        <activity android:name=".business.train.TrainMainActivity"/>
-        <activity android:name=".business.hotels.HotelMainActivity"/>
-
-        <activity android:name=".base.view.citypicker.CityPickerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-
-
+            android:label="@string/title_activity_base" />
+        <activity android:name=".business.aircraft.AircraftMainActivity" />
+        <activity android:name=".business.car.CarMainActivity" />
+        <activity android:name=".business.train.TrainMainActivity" />
+        <activity android:name=".business.hotels.HotelMainActivity" />
+        <activity
+            android:name=".base.view.citypicker.CityPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
 
         <!-- 您的发布产品中请不要使用这个 key !!! -->
         <meta-data
             android:name="TencentMapSDK"
             android:value="JPQBZ-67JKU-G6CVL-BTDXN-ZGDN6-KDFBW" />
+
+        <activity android:name=".business.hotels.CalendarListActivity"></activity>
     </application>
 
 </manifest>

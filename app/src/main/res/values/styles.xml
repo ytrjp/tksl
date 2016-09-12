@@ -24,4 +24,8 @@
         <item name="android:textColor">@color/gray</item>
     </style>
 
+    <style name="progress_bar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:progressDrawable">@drawable/base_loading_large_anim</item>
+    </style>
+
 </resources>

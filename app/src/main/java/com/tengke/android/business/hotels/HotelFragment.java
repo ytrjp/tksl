@@ -22,6 +22,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class HotelFragment extends BaseFragment {
 
@@ -82,11 +83,15 @@ public class HotelFragment extends BaseFragment {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.city_name_txt:
+                case R.id.city_name_txt: {
                     Intent intent = new Intent(getActivity(), CityPickerActivity.class);
                     startActivity(intent);
+                }
                     break;
-                case  R.id.select_time:
+                case  R.id.select_time: {
+                    Intent intent = new Intent(getActivity(), CalendarListActivity.class);
+                    startActivity(intent);
+                }
                     break;
                 case R.id.select_day_container:
                     break;
