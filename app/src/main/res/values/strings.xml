@@ -13,13 +13,16 @@
     <string name="home">首页</string>
     <string name="order_list">订单</string>
     <string name="my_user">我的</string>
-    <string name="app_ch_name">腾科商旅行</string>
+    <string name="app_ch_name">腾科商旅</string>
 
     <string name="hotel">国内酒店</string>
     <string name="air_ticket">国内机票</string>
     <string name="railway_ticket">火车票</string>
     <string name="rent_car">用车</string>
 
+
+    <!--登陆-->
+    <string name="user_login">登录</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

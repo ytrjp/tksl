@@ -1,13 +1,139 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_login_wrapper"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/user_login_backimg"
     tools:context="com.tengke.android.UserFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/my_user" />
+        android:layout_height="wrap_content"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/header_month_height"
+        android:layout_marginTop="92dp"
+        android:textAlignment="center"
+        android:text="@string/app_ch_name" />
+
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="12dp"
+        android:background="@drawable/user_login_back"
+        android:gravity="center" >
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center" >
+            <EditText
+                android:id="@+id/user_login_name"
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="0dp"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:background="#fff"
+                android:hint="账号或手机号"
+                android:textColorHint="#E4E4E4"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="10dp"
+                android:paddingRight="60dp"
+                android:maxLength="20"
+                android:paddingLeft="55dp" >
+            </EditText>
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/user_default_header"
+                android:visibility="visible" />
+
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_height="2px"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:background="@color/white"
+            android:layout_width="fill_parent">
+
+        </TextView>
+
+        <FrameLayout
+            android:id="@+id/user_layout_login_passwd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:gravity="center" >
+            <EditText
+                android:id="@+id/user_login_password"
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="0dp"
+                android:inputType="textPassword"
+                android:background="#fff"
+                android:textColor="@color/black"
+                android:hint="请输入密码"
+                android:textColorHint="#E4E4E4"
+                android:paddingRight="60dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="10dp"
+                android:maxLength="20"
+                android:paddingLeft="55dp" >
+            </EditText>
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/user_icon_password"
+                android:visibility="visible" />
+
+
+        </FrameLayout>
+
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/login_btn_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="262dp"
+        android:background="#00000000"
+        android:textColor="@color/main_text_color"
+        android:text="忘记密码"
+        android:textSize="16dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="320dp"
+        >
+
+
+
+        <Button
+            android:id="@+id/user_btn_login"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/user_login"
+            android:textSize="23dp"
+            android:textColorHint="@color/white"
+            android:background="@drawable/user_btn_login"
+            />
+    </RelativeLayout>
 
 </FrameLayout>
