@@ -64,7 +64,6 @@ public class HomeFragment extends BaseFragment {
         rentCarTxt.setOnClickListener(onClickListener);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
     }
 

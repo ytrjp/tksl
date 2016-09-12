@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -22,6 +22,10 @@
         <item name="android:paddingBottom">8dp</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="progress_bar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:progressDrawable">@drawable/base_loading_large_anim</item>
     </style>
 
 </resources>

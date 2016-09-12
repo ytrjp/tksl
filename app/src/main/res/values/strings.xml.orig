@@ -20,13 +20,16 @@
     <string name="railway_ticket">火车票</string>
     <string name="rent_car">用车</string>
 
+<<<<<<< HEAD
+
+    <!--登陆-->
+    <string name="user_login">登录</string>
+=======
     <string name="search">搜索</string>
     <string name="select_days">住%d晚</string>
     <string name="location_hotel">位置/酒店名</string>
 
-
-    <!--登陆-->
-    <string name="user_login">登录</string>
+>>>>>>> 8832154fa4eb2b2474f2cf2d2a309da6695f29e9
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

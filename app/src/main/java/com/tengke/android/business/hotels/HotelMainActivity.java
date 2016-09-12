@@ -44,7 +44,7 @@ public class HotelMainActivity extends BaseActivity {
         initBottomNav();
 
         int firstPage = (savedInstanceState == null) ?
-                getIntent() == null ? 0 : getIntent().getIntExtra(EXTRA_INIT_PAGE_ID, HomeFragment.PAGE_POSITION) :
+                getIntent() == null ? 0 : getIntent().getIntExtra(EXTRA_INIT_PAGE_ID, HotelFragment.PAGE_POSITION) :
                 savedInstanceState.getInt(EXTRA_INIT_PAGE_ID);
         gotoPage(firstPage, null, true);
     }
@@ -103,8 +103,8 @@ public class HotelMainActivity extends BaseActivity {
             transaction.show(bf);
         } else {//添加不存在的新页面
             switch (pageId) {
-                case HomeFragment.PAGE_POSITION:
-                    bf = HomeFragment.newInstance(bundle);
+                case HotelFragment.PAGE_POSITION:
+                    bf = HotelFragment.newInstance(bundle);
                     break;
                 case OrderListFragment.PAGE_POSITION:
                     bf = OrderListFragment.newInstance(bundle);
@@ -165,7 +165,7 @@ public class HotelMainActivity extends BaseActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.main_btn_nav_main:
-                    gotoPage(HomeFragment.PAGE_POSITION, null, false);
+                    gotoPage(HotelFragment.PAGE_POSITION, null, false);
                     break;
                 case R.id.main_btn_nav_order:
                     gotoPage(OrderListFragment.PAGE_POSITION, null, false);
@@ -196,7 +196,7 @@ public class HotelMainActivity extends BaseActivity {
         for (int i = 0; i < 4; i++) {
             BaseFragment temp = (BaseFragment) getSupportFragmentManager().findFragmentByTag(String.valueOf(i));
             if (temp != null) {
-                if (currentPosition != i && i != HomeFragment.PAGE_POSITION) {
+                if (currentPosition != i && i != HotelFragment.PAGE_POSITION) {
                     transaction.remove(temp);
                 }
             }
