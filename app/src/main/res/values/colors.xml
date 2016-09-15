@@ -23,5 +23,9 @@
     <color name="color_ef000000">#ef000000</color>
 
     <color name="color_7575ff">#7575ff</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="main_text_color">#0099CC</color>
 
+    <color name="orange">#FF9900</color>
 </resources>
