@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_below="@id/city_name_txt"
-            android:text="@string/select_city" />
+            android:text="@string/select_date" />
 
         <RelativeLayout
             android:id="@+id/select_day_container"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/select_time">
 
-            <ImageView
+            <ImageView android:id="@+id/sub_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -62,7 +62,7 @@
                 android:layout_below="@id/select_days_txt"
                 android:text="@string/select_city" />
 
-            <ImageView
+            <ImageView android:id="@+id/add_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"

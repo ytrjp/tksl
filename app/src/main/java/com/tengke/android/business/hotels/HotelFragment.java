@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.tengke.android.R;
 import com.tengke.android.base.ui.BaseFragment;
 import com.tengke.android.base.view.citypicker.CityPickerActivity;
+import com.tengke.android.eventbus.SelectCalendarEvent;
 import com.tengke.android.eventbus.SelectCityMsgEvent;
 
 import org.greenrobot.eventbus.EventBus;
@@ -31,8 +33,13 @@ public class HotelFragment extends BaseFragment {
     @BindView(R.id.city_name_txt) TextView cityNameTxt;
     @BindView(R.id.select_time) TextView selectTimeTxt;
     @BindView(R.id.select_day_container) RelativeLayout selectDayLayout;
+    @BindView(R.id.select_days_txt) TextView selectDaysTxt;
     @BindView(R.id.select_hotel_name_txt) TextView selectHotelTxt;
     @BindView(R.id.search_btn) Button searchBtn;
+    @BindView(R.id.sub_day) ImageView subBtn;
+    @BindView(R.id.add_day) ImageView addBtn;
+
+    private int currentDays;
 
     public HotelFragment() {
         // Required empty public constructor
@@ -61,6 +68,11 @@ public class HotelFragment extends BaseFragment {
         cityNameTxt.setText(event.getCity());
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void refreshDateTime(SelectCalendarEvent event) {
+        selectTimeTxt.setText(event.getData());
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -72,11 +84,19 @@ public class HotelFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        currentDays = 1;
+        setDays();
         cityNameTxt.setOnClickListener(onClickListener);
         selectTimeTxt.setOnClickListener(onClickListener);
         selectDayLayout.setOnClickListener(onClickListener);
         selectHotelTxt.setOnClickListener(onClickListener);
         searchBtn.setOnClickListener(onClickListener);
+        addBtn.setOnClickListener(onClickListener);
+        subBtn.setOnClickListener(onClickListener);
+    }
+
+    private void setDays() {
+        selectDaysTxt.setText(String.format(getString(R.string.select_days), currentDays));
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -93,6 +113,16 @@ public class HotelFragment extends BaseFragment {
                     startActivity(intent);
                 }
                     break;
+                case R.id.add_day: {
+                    currentDays ++;
+                    setDays();
+                }
+                break;
+                case R.id.sub_day: {
+                    currentDays = currentDays == 1 ? 1 : --currentDays;
+                    setDays();
+                }
+                break;
                 case R.id.select_day_container:
                     break;
                 case R.id.select_hotel_name_txt:

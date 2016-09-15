@@ -8,6 +8,11 @@ import com.andexert.calendarlistview.library.DatePickerController;
 import com.andexert.calendarlistview.library.DayPickerView;
 import com.andexert.calendarlistview.library.SimpleMonthAdapter;
 import com.tengke.android.R;
+import com.tengke.android.eventbus.SelectCalendarEvent;
+
+import org.greenrobot.eventbus.EventBus;
+
+import java.util.Calendar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,7 +29,6 @@ public class CalendarListActivity extends AppCompatActivity implements DatePicke
         ButterKnife.bind(this);
 
         dayPickerView.setController(this);
-
     }
 
     @Override
@@ -35,6 +39,15 @@ public class CalendarListActivity extends AppCompatActivity implements DatePicke
     @Override
     public void onDayOfMonthSelected(int year, int month, int day) {
         Log.e("Day Selected", day + " / " + month + " / " + year);
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, day);
+        int weekDay = calendar.get(Calendar.DAY_OF_WEEK);
+
+        SelectCalendarEvent event = new SelectCalendarEvent();
+        event.setData(year, month, day, weekDay);
+        EventBus.getDefault().post(event);
+
+        this.finish();
     }
 
     @Override
