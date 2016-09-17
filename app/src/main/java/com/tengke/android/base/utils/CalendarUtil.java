@@ -1,21 +1,17 @@
-package com.tengke.android.eventbus;
+package com.tengke.android.base.utils;
+
 
 import java.util.Calendar;
+import java.util.Date;
 
-public class SelectCalendarEvent {
-    private int year;
-    private int month;
-    private int day;
-    private int week;
-
-    public void setData(int year, int month, int day, int week) {
-        this.year = year;
-        this.month = month;
-        this.day = day;
-        this.week = week;
+public class CalendarUtil {
+    public static Calendar getCalendarOfDays(Calendar calendar, int days) {
+        calendar.add(Calendar.DATE, days);
+        return calendar;
     }
 
-    public String getData() {
+    public static String getWeek(Calendar calendar) {
+        int week = calendar.get(Calendar.WEEK_OF_MONTH);
         String weekStr = "";
         switch (week) {
             case Calendar.MONDAY:
@@ -40,12 +36,8 @@ public class SelectCalendarEvent {
                 weekStr = "周末";
                 break;
         }
+        int month = calendar.get(Calendar.MONTH) + 1;
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
         return String.format("%d月%d日%s", month, day, weekStr);
-    }
-
-    public Calendar getCalendar() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month, day);
-        return calendar;
     }
 }

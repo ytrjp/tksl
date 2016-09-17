@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.tengke.android.R;
 import com.tengke.android.base.ui.BaseFragment;
+import com.tengke.android.base.utils.CalendarUtil;
 import com.tengke.android.base.view.citypicker.CityPickerActivity;
 import com.tengke.android.eventbus.SelectCalendarEvent;
 import com.tengke.android.eventbus.SelectCityMsgEvent;
@@ -21,6 +22,9 @@ import com.tengke.android.eventbus.SelectCityMsgEvent;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+
+import java.util.Calendar;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,8 +42,11 @@ public class HotelFragment extends BaseFragment {
     @BindView(R.id.search_btn) Button searchBtn;
     @BindView(R.id.sub_day) ImageView subBtn;
     @BindView(R.id.add_day) ImageView addBtn;
+    @BindView(R.id.day_txt) TextView dayTxt;
 
     private int currentDays;
+    private Calendar currentCalendar;
+    private Calendar nextCalendar;
 
     public HotelFragment() {
         // Required empty public constructor
@@ -71,6 +78,7 @@ public class HotelFragment extends BaseFragment {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void refreshDateTime(SelectCalendarEvent event) {
         selectTimeTxt.setText(event.getData());
+        currentCalendar = event.getCalendar();
     }
 
     @Override
@@ -93,10 +101,24 @@ public class HotelFragment extends BaseFragment {
         searchBtn.setOnClickListener(onClickListener);
         addBtn.setOnClickListener(onClickListener);
         subBtn.setOnClickListener(onClickListener);
+
+        initData();
     }
 
     private void setDays() {
         selectDaysTxt.setText(String.format(getString(R.string.select_days), currentDays));
+    }
+
+    private void setTiems(boolean isAdd) {
+        if (currentDays - 1 != 0) {
+
+            if (currentCalendar == null) {
+                currentCalendar = Calendar.getInstance();
+            }
+            Calendar calendar = CalendarUtil.getCalendarOfDays(nextCalendar, isAdd ? 1 : -1);
+            String days = CalendarUtil.getWeek(calendar);
+            dayTxt.setText(days);
+        }
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -116,9 +138,11 @@ public class HotelFragment extends BaseFragment {
                 case R.id.add_day: {
                     currentDays ++;
                     setDays();
+                    setTiems(true);
                 }
                 break;
                 case R.id.sub_day: {
+                    setTiems(false);
                     currentDays = currentDays == 1 ? 1 : --currentDays;
                     setDays();
                 }
@@ -132,4 +156,17 @@ public class HotelFragment extends BaseFragment {
             }
         }
     };
+
+    private void initData() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        String currentDate = CalendarUtil.getWeek(calendar);
+        selectTimeTxt.setText(currentDate);
+
+        nextCalendar = CalendarUtil.getCalendarOfDays(calendar, 1);
+        String dayData = CalendarUtil.getWeek(nextCalendar);
+        dayTxt.setText(dayData);
+
+    }
+
 }
