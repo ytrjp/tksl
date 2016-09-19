@@ -61,7 +61,8 @@
             android:name="TencentMapSDK"
             android:value="JPQBZ-67JKU-G6CVL-BTDXN-ZGDN6-KDFBW" />
 
-        <activity android:name=".business.hotels.CalendarListActivity"></activity>
+        <activity android:name=".business.hotels.CalendarListActivity" />
+        <activity android:name=".business.hotels.HotelSearchActivity"></activity>
     </application>
 
 </manifest>

@@ -151,7 +151,10 @@ public class HotelFragment extends BaseFragment {
                     break;
                 case R.id.select_hotel_name_txt:
                     break;
-                case R.id.search_btn:
+                case R.id.search_btn: {
+                    Intent intent = new Intent(getActivity(), HotelSearchActivity.class);
+                    startActivity(intent);
+                }
                     break;
             }
         }

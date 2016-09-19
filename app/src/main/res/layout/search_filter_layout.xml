@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="bottom"
+    android:layout_alignParentBottom="true"
+    android:background="@android:color/background_dark">
+
+    <TextView
+        android:id="@+id/recommend"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="@string/recommend_sort"
+        android:gravity="center"
+        android:layout_weight="1"></TextView>
+
+    <TextView
+        android:id="@+id/price_star"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="@string/price_star_sort"
+        android:gravity="center"
+        android:layout_weight="1"></TextView>
+
+    <TextView
+        android:id="@+id/more"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="@string/more_filter"
+        android:gravity="center"
+        android:layout_weight="1"></TextView>
+</LinearLayout>

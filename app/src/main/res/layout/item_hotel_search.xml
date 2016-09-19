@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="6.6km"
+        android:layout_alignLeft="@id/image_view"
+        android:layout_alignRight="@id/image_view"
+        android:layout_alignBottom="@id/image_view" />
+
+    <TextView
+        android:id="@+id/hotel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image_view"
+        android:paddingLeft="10dp"
+        android:text="武汉五月花酒店" />
+
+    <TextView
+        android:id="@+id/star_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotel_name"
+        android:paddingLeft="10dp"
+        android:text="五星级"
+        android:layout_alignLeft="@id/hotel_name" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/hotel_name"
+        android:text="中南商业圈"
+        android:paddingLeft="10dp"
+        android:layout_alignBottom="@id/image_view"
+        android:layout_below="@id/star_name" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="500起"
+        android:layout_alignBottom="@id/location" />
+
+</RelativeLayout>
