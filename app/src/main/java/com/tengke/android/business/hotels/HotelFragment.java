@@ -28,7 +28,6 @@ import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class HotelFragment extends BaseFragment {
 
@@ -169,7 +168,6 @@ public class HotelFragment extends BaseFragment {
         nextCalendar = CalendarUtil.getCalendarOfDays(calendar, 1);
         String dayData = CalendarUtil.getWeek(nextCalendar);
         dayTxt.setText(dayData);
-
     }
 
 }
