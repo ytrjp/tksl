@@ -26,7 +26,6 @@
         android:layout_marginLeft="40dp"
         android:textColor="@color/gray_deep"
         android:layout_below="@id/title"
-        android:layout_alignBaseline="@id/input_password"
         android:text="新密码" />
 
     <EditText
@@ -49,10 +48,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
         android:textColor="@color/gray_deep"
         android:layout_marginRight="10dp"
         android:layout_below="@id/title_passwd"
-        android:layout_alignBaseline="@id/input_repassword"
         android:text="确认新密码" />
 
     <EditText
