@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="hotel_filter_recommend">
+        <item name="price_asc">价格由低到高</item>
+        <item name="price_desc">价格由高到低</item>
+        <item name="distance_asc">距离由近到远</item>
+        <item name="distance_desc">距离由远到近</item>
+    </string-array>
+</resources>

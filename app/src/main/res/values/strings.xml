@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TengkeBussinessTrip</string>
+    <string name="app_name">腾科商旅</string>
     <string name="select_city">选择城市</string>
     <string name="hot_city">热门城市</string>
     <string name="located_city">定位城市</string>
@@ -29,6 +29,10 @@
     <string name="price_star_sort">价格星级排序</string>
     <string name="more_filter">更多筛选</string>
 
+    <string name="price_asc">价格由低到高</string>
+    <string name="price_desc">价格由高到低</string>
+    <string name="distance_asc">距离由近到远</string>
+    <string name="distance_desc">距离由远到近</string>
 
     <!--登陆-->
     <string name="user_login">登录</string>

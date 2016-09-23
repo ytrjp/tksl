@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?><!--酒店详情dialog-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/close"
+        android:text="大开间-标准价" />
+
+    <TextView
+        android:id="@+id/type_bed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:text="床型:" />
+
+    <TextView
+        android:id="@+id/bed_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/type_bed"
+        android:layout_below="@id/title"
+        android:text="无早" />
+
+    <TextView
+        android:id="@+id/wifi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/type_bed"
+        android:text="宽带:" />
+
+    <TextView
+        android:id="@+id/wifi_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/wifi_title"
+        android:layout_below="@id/type_bed"
+        android:text="wifi" />
+
+    <TextView
+        android:id="@+id/area_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wifi_title"
+        android:text="面积:" />
+
+    <TextView
+        android:id="@+id/area_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/area_title"
+        android:layout_below="@id/wifi_title"
+        android:text="50m" />
+
+    <TextView
+        android:id="@+id/floor_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/area_title"
+        android:text="楼层:" />
+
+    <TextView
+        android:id="@+id/floor_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/floor_title"
+        android:layout_below="@id/area_title"
+        android:text="8F" />
+
+    <TextView
+        android:id="@+id/bed_width_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/floor_title"
+        android:text="床宽:" />
+
+    <TextView
+        android:id="@+id/bed_width_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bed_width_title"
+        android:layout_below="@id/floor_title"
+        android:text="1.90m" />
+
+    <TextView
+        android:id="@+id/smokeless_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bed_width_title"
+        android:text="无烟房:" />
+
+    <TextView
+        android:id="@+id/smokeless_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/smokeless_title"
+        android:layout_below="@id/bed_width_title"
+        android:text="是" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$240........."
+            android:gravity="left" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="预计" />
+    </LinearLayout>
+
+</RelativeLayout>

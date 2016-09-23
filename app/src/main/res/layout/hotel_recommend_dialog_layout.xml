@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--推荐Dialog-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/price_asc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/price_asc"/>
+
+    <Button
+        android:id="@+id/price_dec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/price_desc"/>
+
+    <Button
+        android:id="@+id/distance_asc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/distance_asc"/>
+</LinearLayout>

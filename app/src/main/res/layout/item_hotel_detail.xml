@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--酒店详情列表-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/type_house"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="111" />
+
+    <TextView
+        android:id="@+id/type_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/type_house"
+        android:text="222" />
+
+    <TextView
+        android:id="@+id/add_eating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/type_house"
+        android:text="无早" />
+
+    <TextView
+        android:id="@+id/type_bed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/add_eating"
+        android:layout_alignTop="@id/add_eating"
+        android:text="大床" />
+
+    <TextView
+        android:id="@+id/type_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/type_bed"
+        android:layout_alignTop="@id/add_eating"
+        android:text="不可取消" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="$650" />
+
+    <Button
+        android:id="@+id/reserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="预订"
+        android:layout_below="@id/price" />
+</RelativeLayout>

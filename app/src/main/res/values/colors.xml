@@ -5,7 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="divider">#E5E5E5</color>
-    <color name="shadow">#AAEBEBEB</color>
+    <color name="shadow">#EBEBEB</color>
     <color name="common_bg">#FAFAFA</color>
     <color name="content_bg">#F3F3F3</color>
     <color name="gray">#8c8c8c</color>
@@ -18,6 +18,10 @@
     <color name="popup_right_bg_selected">#ccc</color>
 
     <color name="div_gray">#ccc</color>
+    <color name="color_f2f2f2">#f2f2f2</color>
+    <color name="color_bg">#f9f9f9</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_e4e4e4">#e4e4e4</color>
 
     <color name="color_99ffffff">#99ffffff</color>
     <color name="color_ef000000">#ef000000</color>
@@ -28,4 +32,7 @@
     <color name="main_text_color">#0099CC</color>
 
     <color name="orange">#FF9900</color>
+    <color name="color_979797">#979797</color>
+    <color name="color_f6f6f6">#f6f6f6</color>
+    <color name="color_fa9a0b">#fa9a0b</color>
 </resources>
