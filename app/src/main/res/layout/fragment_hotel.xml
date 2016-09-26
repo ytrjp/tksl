@@ -8,7 +8,10 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="@dimen/interval_9"
+        android:layout_marginLeft="@dimen/interval_9"
+        android:layout_marginRight="@dimen/interval_9"
+        android:background="@drawable/overlay_bg">
 
 
         <ImageView
@@ -22,25 +25,47 @@
         <TextView
             android:id="@+id/city_name_txt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/title_banner_height"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/color_102102102"
             android:gravity="center"
             android:text="@string/select_city" />
+
+        <view
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginLeft="@dimen/interval_9"
+            android:layout_marginRight="@dimen/interval_9"
+            android:layout_below="@id/city_name_txt"
+            android:layout_height="@dimen/interval_1px" />
 
         <TextView
             android:id="@+id/select_time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/title_banner_height"
             android:gravity="center"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/color_102102102"
             android:layout_below="@id/city_name_txt"
             android:text="@string/select_date" />
+
+        <view
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginLeft="@dimen/interval_9"
+            android:layout_marginRight="@dimen/interval_9"
+            android:layout_below="@id/select_time"
+            android:layout_height="@dimen/interval_1px" />
 
         <RelativeLayout
             android:id="@+id/select_day_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/title_banner_height"
+            android:layout_centerInParent="true"
             android:layout_below="@id/select_time">
 
-            <ImageView android:id="@+id/sub_day"
+            <ImageView
+                android:id="@+id/sub_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -62,7 +87,8 @@
                 android:layout_below="@id/select_days_txt"
                 android:text="@string/select_city" />
 
-            <ImageView android:id="@+id/add_day"
+            <ImageView
+                android:id="@+id/add_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -71,20 +97,36 @@
 
         </RelativeLayout>
 
+        <view
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginLeft="@dimen/interval_9"
+            android:layout_marginRight="@dimen/interval_9"
+            android:layout_below="@id/select_day_container"
+            android:layout_height="@dimen/interval_1px" />
+
         <TextView
             android:id="@+id/select_hotel_name_txt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/title_banner_height"
             android:gravity="center"
+            android:textSize="@dimen/text_size"
             android:layout_below="@id/select_day_container"
             android:text="@string/location_hotel" />
 
     </RelativeLayout>
 
-    <Button android:id="@+id/search_btn"
+    <Button
+        android:id="@+id/search_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/container"
-        android:text="@string/search"/>
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/interval_24"
+        android:background="@color/color_fa9a0b"
+        android:layout_marginLeft="@dimen/interval_9"
+        android:layout_marginRight="@dimen/interval_9"
+        android:text="@string/search" />
 
 </RelativeLayout>

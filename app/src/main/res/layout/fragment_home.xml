@@ -4,12 +4,13 @@
     android:layout_height="match_parent"
     tools:context="com.tengke.android.HomeFragment">
 
-   <TextView android:id="@+id/banner_view"
-       android:layout_width="match_parent"
-       android:layout_height="128dp"
-       android:text="@string/app_ch_name"
-       android:gravity="center"
-       android:background="@drawable/overlay_bg"/>
+    <TextView
+        android:id="@+id/banner_view"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:text="@string/app_ch_name"
+        android:gravity="center"
+        android:background="@color/divider" />
 
 
     <LinearLayout
@@ -25,25 +26,34 @@
             android:layout_weight="1"
             android:layout_below="@id/banner_view"
             android:orientation="horizontal">
-            <TextView android:id="@+id/hotel_txt"
+
+            <TextView
+                android:id="@+id/hotel_txt"
                 android:layout_width="0dp"
+                android:layout_margin="10dp"
                 android:layout_height="match_parent"
-                android:background="@color/gray_deep"
+                android:background="@color/color_cccccc"
                 android:gravity="center"
                 android:text="@string/hotel"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"/>
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
+                android:layout_marginRight="@dimen/interval_9"
+                android:layout_marginBottom="@dimen/interval_9"
+                android:layout_weight="1" />
 
-            <TextView android:id="@+id/air_ticket_txt"
+            <TextView
+                android:id="@+id/air_ticket_txt"
                 android:layout_width="0dp"
+                android:layout_margin="10dp"
                 android:layout_height="match_parent"
-                android:background="@color/gray_deep"
+                android:background="@color/color_cccccc"
                 android:text="@string/air_ticket"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
                 android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"/>
+                android:layout_marginLeft="@dimen/interval_9"
+                android:layout_marginBottom="@dimen/interval_9"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
@@ -52,24 +62,34 @@
             android:layout_weight="1"
             android:layout_below="@id/line_one"
             android:orientation="horizontal">
-            <TextView android:id="@+id/railway_ticket_txt"
+
+            <TextView
+                android:id="@+id/railway_ticket_txt"
                 android:layout_width="0dp"
+                android:layout_margin="10dp"
                 android:layout_height="match_parent"
-                android:background="@color/gray_deep"
+                android:background="@color/color_cccccc"
                 android:gravity="center"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
+                android:layout_marginRight="@dimen/interval_9"
+                android:layout_marginTop="@dimen/interval_9"
                 android:text="@string/railway_ticket"
-                android:layout_weight="1"/>
-            <TextView android:id="@+id/rent_car"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/rent_car"
                 android:layout_width="0dp"
+                android:layout_margin="10dp"
                 android:layout_height="match_parent"
-                android:background="@color/gray_deep"
+                android:background="@color/color_cccccc"
                 android:text="@string/rent_car"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
+                android:layout_marginLeft="@dimen/interval_9"
+                android:layout_marginTop="@dimen/interval_9"
                 android:gravity="center"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
 

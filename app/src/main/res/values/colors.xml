@@ -35,4 +35,10 @@
     <color name="color_979797">#979797</color>
     <color name="color_f6f6f6">#f6f6f6</color>
     <color name="color_fa9a0b">#fa9a0b</color>
+    <color name="color_228228228">#e4e4e4</color>
+    <color name="color_cccccc">#cccccc</color>
+
+    <color name="color_129129129">#818181</color>
+    <color name="color_102102102">#666666</color>
+    <color name="color_6150206">#660696ce</color>
 </resources>
