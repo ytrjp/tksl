@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:paddingTop="@dimen/interval_9"
+    android:layout_marginRight="@dimen/interval_9"
+    android:background="@color/color_249249249"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/image_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/length_67"
+        android:layout_height="@dimen/length_67"
         android:layout_alignParentLeft="true"
         android:background="@drawable/ic_launcher" />
 
     <TextView
         android:id="@+id/distance"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/length_12dp"
         android:gravity="center"
         android:text="6.6km"
+        android:background="@color/color_117116107"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_8"
         android:layout_alignLeft="@id/image_view"
         android:layout_alignRight="@id/image_view"
         android:layout_alignBottom="@id/image_view" />

@@ -9,10 +9,21 @@
 
     <dimen name="navigation_bar_height">44dp</dimen>
 
-    <dimen name="banner_size_width">222dp</dimen>
-    <dimen name="title_banner_height">50dp</dimen>
-    <dimen name="interval_24">24dp</dimen>
+    <dimen name="length_6dp">6dp</dimen>
+    <dimen name="length_8dp">8dp</dimen>
     <dimen name="interval_9">9dp</dimen>
+    <dimen name="length_10dp">10dp</dimen>
+    <dimen name="length_12dp">12dp</dimen>
+    <dimen name="length_15dp">15dp</dimen>
+    <dimen name="interval_24">24dp</dimen>
+    <dimen name="title_banner_height">50dp</dimen>
+    <dimen name="length_67">67dp</dimen>
+    <dimen name="banner_size_width">222dp</dimen>
+
     <dimen name="interval_1px">1px</dimen>
+
+    <dimen name="text_size_8">8sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
     <dimen name="text_size">15sp</dimen>
 </resources>

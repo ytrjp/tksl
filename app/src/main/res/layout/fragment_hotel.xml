@@ -20,7 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:layout_alignParentRight="true"
-            android:background="@android:drawable/arrow_up_float" />
+            android:background="@android:drawable/arrow_up_float"
+            android:contentDescription="contentDescription" />
 
         <TextView
             android:id="@+id/city_name_txt"
@@ -31,7 +32,7 @@
             android:gravity="center"
             android:text="@string/select_city" />
 
-        <view
+        <ImageView
             android:layout_width="match_parent"
             android:background="@color/white"
             android:layout_marginLeft="@dimen/interval_9"
@@ -49,7 +50,7 @@
             android:layout_below="@id/city_name_txt"
             android:text="@string/select_date" />
 
-        <view
+        <ImageView
             android:layout_width="match_parent"
             android:background="@color/white"
             android:layout_marginLeft="@dimen/interval_9"
@@ -61,7 +62,6 @@
             android:id="@+id/select_day_container"
             android:layout_width="match_parent"
             android:layout_height="@dimen/title_banner_height"
-            android:layout_centerInParent="true"
             android:layout_below="@id/select_time">
 
             <ImageView
@@ -97,7 +97,7 @@
 
         </RelativeLayout>
 
-        <view
+        <ImageView
             android:layout_width="match_parent"
             android:background="@color/white"
             android:layout_marginLeft="@dimen/interval_9"
